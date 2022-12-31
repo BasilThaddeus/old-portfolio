@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>C:/BasilThaddeus</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/077ae16d75.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="resume-container" id="resume-container">    
+        <div class="content-container" id="dragResume">
+            <div class="content-controls">
+                <p>Resume.pdf</p>
+                <span id="close" onclick="hideResume()">✕</span>
+            </div>
+            <div class="scroll-content">
+                <embed src="public/resume.pdf" height="100%" width="100%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects-container" id="projects-container">
+        <div class="content-container" id="dragProjects">
+            <div class="content-controls">
+                <p>C:/BasilThaddeus/Projects</p>
+                <span id="close" onclick="hideProjects()">✕</span>
+            </div>
+            <div class="projects-content">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop">
+        <div class="file" id="resume" onclick="openResume()">
+            <img src="public/images/folder.png">
+            <p>Resume</p>
+        </div>
+        <div class="file" id="projects" onclick="openProjects()">
+            <img src="public/images/folder.png">
+            <p>Projects</p>
+        </div>
+        <div class="file" id="other">
+            <img src="public/images/folder.png">
+            <p>Other</p>
+        </div>
+        <div class="file" id="github" onclick="window.open('https://github.com/BasilThaddeus')">
+            <img src="public/images/github.png">
+            <p>GitHub</p>
+        </div>
+        
+    </div>
+    
+    <div class="taskbar">
+        <div class="tasks">
+            <i class="task fa-brands fa-windows"></i>
+            <i class="task fa-brands fa-windows"></i>
+            <i class="task fa-brands fa-windows"></i>
+        </div>
+    </div>
+</body>
+
+<script src="scripts/drag.js"></script>
+<script src="scripts/openFile.js"></script>
+
+</html>

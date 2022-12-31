@@ -1,0 +1,151 @@
+:root {
+    /*
+    bg - background
+    bgh - background hover
+    bgo - background outline
+    tc - text-color
+    tch - text-color hover
+    */
+    --desktop-bg: rgb(126, 96, 150);
+    --taskbar-bg: rgb(51, 51, 51);
+    --taskbar-bgh: rgb(64, 64, 64);
+    --tasks-tc: rgb(255, 255, 255);
+    --tasks-tch: rgb(78, 78, 150);
+    --file-bgh: rgb(200, 230, 255);
+    --file-bgo: rgb(90, 90, 255);
+    --file-tc: rgb(0, 0, 0);
+    --resume-bg: rgb(255, 255, 255);
+
+}
+
+html {
+    background-color: var(--desktop-bg);
+    margin: 0;
+    font-size: 1.5em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 40px;
+
+    background-color: var(--taskbar-bg);
+}
+
+.tasks {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.task {
+    display: inline-table;
+    color: var(--tasks-tc);
+    height: 40px;
+    width: 40px;
+    transition: ease 0.3s;
+}
+
+.task:hover {
+    background-color: var(--taskbar-bgh);
+    transition: ease 0.3s;
+}
+
+.desktop {
+    display: grid;
+    width: 15vw;
+    height: 90vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 80px);
+    grid-gap: 50px;
+}
+
+.file {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.file img {
+    display: block;
+    margin: 0 auto;
+    height: 70%;
+    margin-top: 5px;
+}
+
+.file p {
+    user-select: none;
+    margin-top: 0px;
+}
+
+.file:hover {
+    background-color: var(--file-bgh);
+    outline: 1px var(--file-bgo) solid;
+    opacity: 80%;
+}
+
+.resume-container {
+    visibility: hidden;
+}
+
+.content-container {
+    background-color:  var(--resume-bg);
+    height: 80vh;
+    width: 40vw;
+    z-index: 5;
+    position: absolute;
+    left: 35vw;
+    top: 5vw;
+}
+
+.content-controls {
+    background-color: var(--taskbar-bg);
+
+    position: absolute;
+    top: 0;
+
+    height: 40px;
+    width: 100%;
+    color: white;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+
+    cursor: move;
+}
+
+.content-controls p {
+    float: left;
+    font-size: 0.75em;
+    cursor: default;
+}
+
+.content-controls span {
+    position: absolute;
+    padding-right: 5px;
+    right: 0;
+    cursor: default;
+}
+
+.scroll-content {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+    height: calc(100% - 40px);
+    margin-top: 40px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.projects-container {
+    visibility: hidden;
+}
